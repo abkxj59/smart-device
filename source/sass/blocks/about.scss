@@ -1,0 +1,56 @@
+.about {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding-bottom: 100px;
+
+  @include vp-1023 {
+    padding-bottom: 80px;
+  }
+}
+
+.about img {
+  margin-right: 100px;
+
+  @include vp-1023 {
+    margin-right: 30px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.about h2 {
+  font-family: "Roboto Condensed", "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 35px;
+  }
+}
+
+.about button {
+  min-width: 180px;
+  padding: 14px;
+  font-size: 14px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $light-blue;
+  box-sizing: border-box;
+  border: 1px solid $light-blue;
+  border-radius: 3px;
+  background: none;
+
+  &:hover {
+    background-color: $light-blue;
+    color: $basic-white;
+  }
+
+  @include vp-767 {
+    min-width: 160px;
+    padding: 9px;
+  }
+}

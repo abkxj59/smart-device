@@ -1,0 +1,30 @@
+.sections ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: row dense;
+
+  @include vp-1023 {
+    display: block;
+  }
+}
+
+.sections li {
+  max-width: 235px;
+}
+
+.sections li:nth-child(-n+4) {
+  grid-column-start: 1;
+}
+
+.sections a {
+  display: block;
+  margin: 0;
+  padding-bottom: 10px;
+  color: $default-white;
+  opacity: 30%;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+

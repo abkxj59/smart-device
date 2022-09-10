@@ -1,0 +1,26 @@
+.social ul {
+  display: flex;
+  padding-left: 10px;
+
+  @include vp-1023 {
+    justify-content: flex-end;
+  }
+
+  @include vp-767 {
+    justify-content: center;
+  }
+}
+
+.social li {
+  margin-right: 15px;
+
+  @include vp-1023 {
+    &:last-child {
+      margin-right: -5px;
+    }
+  }
+}
+
+.social a {
+  padding: 5px;
+}

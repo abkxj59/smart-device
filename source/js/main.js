@@ -1,24 +1,44 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
+const aboutToggleButton = document.querySelector('.about__button');
+const hiddenText = document.querySelectorAll('.about__text--switchable');
 
-// ---------------------------------
+const switchAbout = () => {
+  if (aboutToggleButton.classList.contains('about__button--open')) {
+    hiddenText.forEach((item) => {
+      item.hidden = false;
+    });
+    aboutToggleButton.textContent = 'Свернуть';
+  } else {
+    hiddenText.forEach((item) => {
+      item.hidden = true;
+    });
+    aboutToggleButton.textContent = 'Подробнее';
+  }
+  aboutToggleButton.classList.toggle('about__button--open');
+};
 
-window.addEventListener('DOMContentLoaded', () => {
+aboutToggleButton.addEventListener('click', switchAbout);
 
-  // Utils
-  // ---------------------------------
+// import {iosVhFix} from './utils/ios-vh-fix';
+// import {initModals} from './modules/modals/init-modals';
 
-  iosVhFix();
+// // ---------------------------------
 
-  // Modules
-  // ---------------------------------
+// window.addEventListener('DOMContentLoaded', () => {
 
-  // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
-  // в load следует добавить скрипты, не участвующие в работе первого экрана
-  window.addEventListener('load', () => {
-    initModals();
-  });
-});
+//   // Utils
+//   // ---------------------------------
+
+//   iosVhFix();
+
+//   // Modules
+//   // ---------------------------------
+
+//   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
+//   // в load следует добавить скрипты, не участвующие в работе первого экрана
+//   window.addEventListener('load', () => {
+//     initModals();
+//   });
+// });
 
 // ---------------------------------
 
