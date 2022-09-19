@@ -65,17 +65,12 @@
 
 .goods li {
   max-width: 350px;
-
-  // &:nth-child(3n) {
-  //   margin-right: 0;
-  // }
-  // &:nth-child(n + 4) {
-  //   margin-top: 10px;
-  // }
+  height: 650px;
 
   @include vp-1023 {
     margin: 0;
     max-width: none;
+    height: 250px;
   }
 }
 

@@ -1,14 +1,62 @@
 .product {
   position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.product a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .product img {
+  position: absolute;
   width: 100%;
-  height: 650px;
+  height: 100%;
+  top: 0;
   object-fit: cover;
 
   @include vp-1023 {
-    height: 250px;
+    object-fit: none;
+  }
+}
+
+.product__bg {
+  &--1 {
+    object-position: 15%;
+
+    @include vp-1023 {
+      object-position: 35% 95%;
+    }
+
+    @include vp-767 {
+      object-position: 30% 55%;
+    }
+  }
+
+  &--2 {
+    object-position: 48%;
+
+    @include vp-1023 {
+      object-position: 73% 10%;
+    }
+
+    @include vp-767 {
+      object-position: 35% 95%;
+    }
+  }
+
+  &--3 {
+    object-position: 79%;
+
+    @include vp-1023 {
+      object-position: 20% 65%;
+    }
+
+    @include vp-767 {
+      object-position: 70% 70%;
+    }
   }
 }
 
@@ -42,10 +90,10 @@
   right: 1px;
   bottom: 0;
 
-    @include vp-1023 {
-      right: 0;
-    }
+  @include vp-1023 {
+    right: 0;
   }
+}
 
 .product svg {
   display: block;
@@ -53,16 +101,5 @@
   @include vp-767 {
     width: 40px;
     height: 40px;
-  }
-}
-
-.product__bg {
-  &--1 {
-    // object-position: -170px;
-    object-position: 17%;
-  }
-
-  &--3 {
-    object-position: 83%;
   }
 }

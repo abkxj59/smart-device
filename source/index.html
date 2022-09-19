@@ -188,7 +188,7 @@
             <label class="visually-hidden" for="name">Имя</label>
             <input type="text" name="name" id="name" placeholder="Имя" required>
             <label class="visually-hidden" for="tel">Телефон</label>
-            <input type="tel" name="tel" id="tel" placeholder="Телефон" minlength="10" required>
+            <input type="text" name="tel" id="tel" data-mask="phone" placeholder="Телефон" minlength="10" required>
             <label class="visually-hidden" for="question">Ваш вопрос</label>
             <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
             <button class="form__submit-button" type="submit">Задать вопрос</button>
@@ -318,7 +318,7 @@
           <label class="visually-hidden" for="modal-name">Имя</label>
           <input type="text" name="name" id="modal-name" placeholder="Имя" required>
           <label class="visually-hidden" for="modal-tel">Телефон</label>
-          <input type="tel" name="tel" id="modal-tel" placeholder="Телефон" required>
+          <input type="text" name="tel" id="modal-tel" data-mask="phone" minlength="10" placeholder="Телефон" required>
           <label class="visually-hidden" for="modal-question">Ваш вопрос</label>
           <textarea name="question" id="modal-question" placeholder="Ваш вопрос"></textarea>
           <button class="form__submit-button" type="submit">Отправить</button>

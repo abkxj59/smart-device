@@ -951,6 +951,7 @@ button,
 
 .goods li {
   max-width: 350px;
+  height: 650px;
 }
 
 .goods a {
@@ -959,13 +960,38 @@ button,
 
 .product {
   position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.product a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .product img {
+  position: absolute;
   width: 100%;
-  height: 650px;
+  height: 100%;
+  top: 0;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+.product__bg--1 {
+  -o-object-position: 15%;
+  object-position: 15%;
+}
+
+.product__bg--2 {
+  -o-object-position: 48%;
+  object-position: 48%;
+}
+
+.product__bg--3 {
+  -o-object-position: 79%;
+  object-position: 79%;
 }
 
 .product h3 {
@@ -990,16 +1016,6 @@ button,
 
 .product svg {
   display: block;
-}
-
-.product__bg--1 {
-  -o-object-position: 17%;
-  object-position: 17%;
-}
-
-.product__bg--3 {
-  -o-object-position: 83%;
-  object-position: 83%;
 }
 
 .feedback {
@@ -1447,13 +1463,6 @@ button,
   background-color: #026593;
 }
 
-/* @media (hover: hover), screen and (min-width: 0\0) {
-  &:hover,
-  &:focus {
-    color: $color-default-white;
-  }
-} */
-
 @media (max-width: 1023px) {
   .container {
     padding: 0 50px;
@@ -1560,10 +1569,27 @@ button,
   .goods li {
     margin: 0;
     max-width: none;
+    height: 250px;
   }
 
   .product img {
-    height: 250px;
+    -o-object-fit: none;
+    object-fit: none;
+  }
+
+  .product__bg--1 {
+    -o-object-position: 35% 95%;
+    object-position: 35% 95%;
+  }
+
+  .product__bg--2 {
+    -o-object-position: 73% 10%;
+    object-position: 73% 10%;
+  }
+
+  .product__bg--3 {
+    -o-object-position: 20% 65%;
+    object-position: 20% 65%;
   }
 
   .product h3 {
@@ -1833,6 +1859,21 @@ button,
 
   .goods__heading-text--mobile {
     display: block;
+  }
+
+  .product__bg--1 {
+    -o-object-position: 30% 55%;
+    object-position: 30% 55%;
+  }
+
+  .product__bg--2 {
+    -o-object-position: 35% 95%;
+    object-position: 35% 95%;
+  }
+
+  .product__bg--3 {
+    -o-object-position: 70% 70%;
+    object-position: 70% 70%;
   }
 
   .product h3 {
