@@ -1,0 +1,25 @@
+.accordion--opened {
+  @include vp-767 {
+    & .accordion__icon--plus {
+      display: none;
+    }
+
+    & .accordion__icon--minus,
+    & .accordion__content {
+      display: block;
+    }
+  }
+}
+
+.accordion--closed {
+  @include vp-767 {
+    & accordion__icon--plus {
+      display: block;
+    }
+
+    & .accordion__icon--minus,
+    & .accordion__content {
+      display: none;
+    }
+  }
+}

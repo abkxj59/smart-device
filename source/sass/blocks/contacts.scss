@@ -8,3 +8,11 @@
     opacity: 1;
   }
 }
+
+.contacts li {
+  &:first-child {
+    @include vp-767{
+      margin-bottom: 10px;
+    }
+  }
+}

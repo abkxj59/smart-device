@@ -1,22 +1,12 @@
-const aboutToggleButton = document.querySelector('.about__button');
-const hiddenText = document.querySelectorAll('.about__text--switchable');
+import {initAboutToggle} from './modules/about-toggle.js';
+import {initFooterAccordion} from './modules/footer-accordion.js';
+import {initModal} from './modules/modal.js';
+// import {initTelMask} from './modules/tel-mask.js';
+// import './modules/tel-mask.js';
 
-const switchAbout = () => {
-  if (aboutToggleButton.classList.contains('about__button--open')) {
-    hiddenText.forEach((item) => {
-      item.hidden = false;
-    });
-    aboutToggleButton.textContent = 'Свернуть';
-  } else {
-    hiddenText.forEach((item) => {
-      item.hidden = true;
-    });
-    aboutToggleButton.textContent = 'Подробнее';
-  }
-  aboutToggleButton.classList.toggle('about__button--open');
-};
-
-aboutToggleButton.addEventListener('click', switchAbout);
+initModal();
+initAboutToggle();
+initFooterAccordion();
 
 // import {iosVhFix} from './utils/ios-vh-fix';
 // import {initModals} from './modules/modals/init-modals';

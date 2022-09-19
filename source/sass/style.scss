@@ -14,23 +14,26 @@
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
+@import "global/accordion";
 
 // Blocks
 // ---------------------------------
 
 @import "blocks/page";
 @import "blocks/page-header";
-@import "blocks/sections";
 @import "blocks/promo";
 @import "blocks/features";
 @import "blocks/feature";
 @import "blocks/about";
+@import "blocks/goods";
+@import "blocks/product";
+@import "blocks/feedback";
+@import "blocks/form";
 @import "blocks/page-footer";
+@import "blocks/sections";
 @import "blocks/social";
 @import "blocks/contacts";
-
-// @import "blocks/btn";
-// @import "blocks/modal";
+@import "blocks/modal";
 
 // ---------------------------------
 
