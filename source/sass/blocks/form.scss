@@ -14,7 +14,7 @@
   }
 }
 
-.modal .form {
+.form--modal {
   display: block;
   padding-left: 0;
   padding-bottom: 5px;
@@ -41,7 +41,7 @@
   }
 }
 
-.modal h2 {
+.form--modal h2 {
   font-size: 30px;
   line-height: 42px;
   margin-top: -3px;
@@ -63,7 +63,7 @@
   }
 }
 
-.modal p {
+.form--modal p {
   margin-bottom: 38px;
 }
 
@@ -90,8 +90,8 @@
   }
 }
 
-.modal input,
-.modal textarea {
+.form--modal input,
+.form--modal textarea {
   display: block;
   width: 100%;
 }
@@ -119,7 +119,7 @@
   }
 }
 
-.modal textarea {
+.form--modal textarea {
   margin-bottom: 24px;
 }
 
@@ -155,7 +155,7 @@
   }
 }
 
-.modal .form__submit-button {
+.form--modal .form__submit-button {
   width: 100%;
   margin-bottom: 5px;
 }
@@ -203,7 +203,7 @@
   outline-offset: 2px;
 }
 
-.form input[type="checkbox"]:active label {
+.form input[type="checkbox"]:active + label {
   background-color: $bg-blue;
 }
 

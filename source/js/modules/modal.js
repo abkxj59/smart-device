@@ -4,7 +4,7 @@ const nameInput = document.querySelector('#modal-name');
 const overlay = document.querySelector('.modal__overlay');
 const openModalButton = document.querySelector('.page-header__button');
 const closeModalButton = document.querySelector('.modal__close-button');
-const form = modal.querySelector('.modal__form');
+const form = document.querySelector('.modal__form');
 
 const closeModal = () => {
   modal.hidden = true;
@@ -13,25 +13,27 @@ const closeModal = () => {
 };
 
 const initModal = () => {
-  openModalButton.addEventListener('click', () => {
-    modal.hidden = false;
-    body.classList.add('page__body--modal-opened');
-    nameInput.focus();
-  });
-  closeModalButton.addEventListener('click', () => {
-    closeModal();
-  });
-  overlay.addEventListener('click', () => {
-    closeModal();
-  });
-  document.addEventListener('keydown', (evt) => {
-    if (evt.key === 'Escape') {
+  if (modal !== null) {
+    openModalButton.addEventListener('click', () => {
+      modal.hidden = false;
+      body.classList.add('page__body--modal-opened');
+      nameInput.focus();
+    });
+    closeModalButton.addEventListener('click', () => {
       closeModal();
-    }
-  });
-  form.addEventListener('submit', () => {
-    closeModal();
-  });
+    });
+    overlay.addEventListener('click', () => {
+      closeModal();
+    });
+    document.addEventListener('keydown', (evt) => {
+      if (evt.key === 'Escape') {
+        closeModal();
+      }
+    });
+    form.addEventListener('submit', () => {
+      closeModal();
+    });
+  }
 };
 
 export {initModal};

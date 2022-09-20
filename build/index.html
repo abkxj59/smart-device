@@ -109,7 +109,7 @@
         <div class="about__content">
           <h2 class="about__heading">О компании</h2>
           <p class="about__text">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-          <p class="about__text">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. <span class="about__text--mobile-switchable">Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
+          <p class="about__text">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. <span class="about__text about__text--mobile-switchable">Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
           <p class="about__text about__text--switchable">Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и 20 городов присутствия.</p>
           <p class="about__text about__text--switchable">Мы стремимся к постоянному развитию и повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и время наших клиентов</p>
           <button class="about__button about__button--open">Подробнее</button>
@@ -126,6 +126,7 @@
             <li class="goods__item">
               <article class="product">
                 <a class="product__link" href="#">
+                  <!-- 1x: 350px, 2x: 700px -->
                   <picture>
                     <source type="image/webp" srcset="img/promo-bg.webp 1x, img/promo-bg@2x.webp 2x">
                     <img class="product__bg product__bg--1" src="img/promo-bg.jpg" srcset="img/promo-bg@2x.jpg 2x" width="350" height="650" alt="">
@@ -143,6 +144,7 @@
             <li>
               <article class="product">
                 <a class="product__link" href="#">
+                  <!-- 1x: 350px, 2x: 700px -->
                   <picture>
                     <source type="image/webp" srcset="img/promo-bg.webp 1x, img/promo-bg@2x.webp 2x">
                     <img class="product__bg product__bg--2" src="img/promo-bg.jpg" srcset="img/promo-bg@2x.jpg 2x" width="350" height="650" alt="">
@@ -159,6 +161,7 @@
             <li>
               <article class="product">
                 <a class="product__link" href="#">
+                  <!-- 1x: 350px, 2x: 700px -->
                   <picture>
                     <source type="image/webp" srcset="img/promo-bg.webp 1x, img/promo-bg@2x.webp 2x">
                     <img class="product__bg product__bg--3" src="img/promo-bg.jpg" srcset="img/promo-bg@2x.jpg 2x" width="350" height="650" alt="">
@@ -178,6 +181,7 @@
 
       <section class="page__section feedback" id="feedback">
         <div class="feedback__container container">
+          <!-- 1x: 510px, 2x: 1020px -->
           <picture>
             <source type="image/webp" srcset="img/airplane.webp 1x, img/airplane@2x.webp 2x">
             <img class="feedback__plane" src="img/airplane.png" srcset="img/airplane@2x.png 2x" alt="" width="510" height="285">
@@ -188,7 +192,7 @@
             <label class="visually-hidden" for="name">Имя</label>
             <input type="text" name="name" id="name" placeholder="Имя" required>
             <label class="visually-hidden" for="tel">Телефон</label>
-            <input type="text" name="tel" id="tel" data-mask="phone" placeholder="Телефон" minlength="10" required>
+            <input type="tel" name="tel" id="tel" data-mask="phone" placeholder="Телефон" minlength="10" required>
             <label class="visually-hidden" for="question">Ваш вопрос</label>
             <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
             <button class="form__submit-button" type="submit">Задать вопрос</button>
@@ -245,7 +249,7 @@
         <section class="page-footer__section page-footer__section--nav footer-nav accordion">
           <div class="page-footer__section-header">
             <h2 class="page-footer__section-heading footer-nav__heading">Разделы сайта</h2>
-            <button type="button" class="page-footer__section-button accordion__button accordion-button--plus" hidden>
+            <button type="button" class="page-footer__section-button accordion__button" hidden>
               <svg width="15" height="15">
                 <use class="accordion__icon accordion__icon--plus" xlink:href="img/sprite_auto.svg#icon-plus"></use>
                 <use class="accordion__icon accordion__icon--minus" xlink:href="img/sprite_auto.svg#icon-minus"></use>
@@ -307,7 +311,7 @@
     <article class="modal" hidden>
       <div class="modal__overlay"></div>
       <div class="modal__content">
-        <form class="modal__form form" method="post" action="https://echo.htmlacademy.ru/">
+        <form class="modal__form form form--modal" method="post" action="https://echo.htmlacademy.ru/">
           <h2 class="form__heading">Закажите звонок</h2>
           <button class="modal__close-button">
             <svg width="20" height="20">
@@ -318,7 +322,7 @@
           <label class="visually-hidden" for="modal-name">Имя</label>
           <input type="text" name="name" id="modal-name" placeholder="Имя" required>
           <label class="visually-hidden" for="modal-tel">Телефон</label>
-          <input type="text" name="tel" id="modal-tel" data-mask="phone" minlength="10" placeholder="Телефон" required>
+          <input type="tel" name="tel" id="modal-tel" data-mask="phone" minlength="10" placeholder="Телефон" required>
           <label class="visually-hidden" for="modal-question">Ваш вопрос</label>
           <textarea name="question" id="modal-question" placeholder="Ваш вопрос"></textarea>
           <button class="form__submit-button" type="submit">Отправить</button>

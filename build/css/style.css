@@ -395,14 +395,6 @@ template {
 }
 
 @font-face {
-  font-family: "PT Mono";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../fonts/pt-mono-regular.woff2") format("woff2"), url("../fonts/pt-mono-regular.woff") format("woff");
-}
-
-@font-face {
   font-family: "Roboto Condensed";
   font-style: normal;
   font-weight: 400;
@@ -674,7 +666,7 @@ button,
   background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
-  color: #F2F5F6;
+  color: #f2f5f6;
   z-index: 10;
 }
 
@@ -744,14 +736,14 @@ button,
   padding: 10px 15px;
   margin-top: 35px;
   margin-right: 60px;
-  border: 1px solid #F2F5F6;
+  border: 1px solid #f2f5f6;
   border-radius: 3px;
 }
 
 .page-header__button:hover,
 .page-header__button:focus {
   cursor: pointer;
-  background-color: #00B2FF;
+  background-color: #00b2ff;
 }
 
 .promo {
@@ -787,7 +779,7 @@ button,
 .promo__content {
   padding-top: 250px;
   padding-left: 165px;
-  color: #F2F5F6;
+  color: #f2f5f6;
 }
 
 .promo h1 {
@@ -814,8 +806,8 @@ button,
   width: -moz-max-content;
   width: max-content;
   padding: 15px 27px;
-  background-color: #00B2FF;
-  color: #F2F5F6;
+  background-color: #00b2ff;
+  color: #f2f5f6;
   font-family: "Roboto Condensed", "Tahoma", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -838,19 +830,19 @@ button,
 .feature {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  border: 1px solid #EBEBEB;
-  border-left: 5px solid #00B2FF;
+  border: 1px solid #ebebeb;
+  border-left: 5px solid #00b2ff;
   padding: 40px;
-  color: #00B2FF;
+  color: #00b2ff;
   min-height: 300px;
 }
 
 .feature:hover,
 .feature:active {
-  background-color: #00B2FF;
-  border: 1px solid #00B2FF;
-  border-left: 5px solid #00B2FF;
-  color: #F2F5F6;
+  background-color: #00b2ff;
+  border: 1px solid #00b2ff;
+  border-left: 5px solid #00b2ff;
+  color: #f2f5f6;
 }
 
 .feature h3 {
@@ -869,7 +861,7 @@ button,
 
 .feature:hover p,
 .feature:active p {
-  color: #F2F5F6;
+  color: #f2f5f6;
 }
 
 .about {
@@ -904,26 +896,28 @@ button,
   font-size: 14px;
   line-height: 15px;
   text-transform: uppercase;
-  color: #00B2FF;
+  color: #00b2ff;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  border: 1px solid #00B2FF;
+  border: 1px solid #00b2ff;
   border-radius: 3px;
   background: none;
   margin-top: 20px;
 }
 
 .about button:hover {
-  background-color: #00B2FF;
-  color: #F2F5F6;
+  background-color: #00b2ff;
+  color: #f2f5f6;
   cursor: pointer;
 }
 
 .goods {
+  position: relative;
   background-color: #041827;
   color: #ffffff;
   padding-top: 70px;
   padding-bottom: 140px;
+  z-index: -1000;
 }
 
 .goods h2 {
@@ -951,7 +945,7 @@ button,
 
 .goods li {
   max-width: 350px;
-  height: 650px;
+  min-height: 650px;
 }
 
 .goods a {
@@ -972,9 +966,9 @@ button,
 
 .product img {
   position: absolute;
+  z-index: -1;
   width: 100%;
   height: 100%;
-  top: 0;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -995,14 +989,13 @@ button,
 }
 
 .product h3 {
-  position: absolute;
-  top: 50px;
+  max-width: 170px;
   margin: 0 40px;
+  padding-top: 50px;
   font-family: "Roboto Condensed", "Tahoma", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-  max-width: 160px;
 }
 
 .product__button {
@@ -1019,8 +1012,8 @@ button,
 }
 
 .feedback {
-  background: -o-linear-gradient(310.8deg, #026593 33%, #00B2FF 33%);
-  background: linear-gradient(139.2deg, #026593 33%, #00B2FF 33%);
+  background: -o-linear-gradient(310.8deg, #026593 33%, #00b2ff 33%);
+  background: linear-gradient(139.2deg, #026593 33%, #00b2ff 33%);
 }
 
 .feedback__container {
@@ -1065,7 +1058,7 @@ button,
   column-gap: 30px;
 }
 
-.modal .form {
+.form--modal {
   display: block;
   padding-left: 0;
   padding-bottom: 5px;
@@ -1082,7 +1075,7 @@ button,
   margin-left: -5px;
 }
 
-.modal h2 {
+.form--modal h2 {
   font-size: 30px;
   line-height: 42px;
   margin-top: -3px;
@@ -1096,7 +1089,7 @@ button,
   margin-bottom: 35px;
 }
 
-.modal p {
+.form--modal p {
   margin-bottom: 38px;
 }
 
@@ -1140,8 +1133,8 @@ button,
   outline: none;
 }
 
-.modal input,
-.modal textarea {
+.form--modal input,
+.form--modal textarea {
   display: block;
   width: 100%;
 }
@@ -1160,7 +1153,7 @@ button,
   box-sizing: border-box;
 }
 
-.modal textarea {
+.form--modal textarea {
   margin-bottom: 24px;
 }
 
@@ -1187,18 +1180,18 @@ button,
   cursor: pointer;
 }
 
-.modal .form__submit-button {
+.form--modal .form__submit-button {
   width: 100%;
   margin-bottom: 5px;
 }
 
-.form input[type=checkbox] {
+.form input[type="checkbox"] {
   position: absolute;
   width: 0;
   right: 0;
 }
 
-.form input[type=checkbox] + label {
+.form input[type="checkbox"] + label {
   position: relative;
   display: block;
   font-size: 14px;
@@ -1209,27 +1202,27 @@ button,
   border-radius: 10px;
 }
 
-.form input[type=checkbox] + label:hover,
-.form input[type=checkbox] + label:focus {
+.form input[type="checkbox"] + label:hover,
+.form input[type="checkbox"] + label:focus {
   background-color: rgba(4, 20, 39, 0.15);
   cursor: pointer;
 }
 
-.form input[type=checkbox] + label:active {
+.form input[type="checkbox"] + label:active {
   background-color: #026593;
 }
 
-.form input[type=checkbox]:focus + label {
+.form input[type="checkbox"]:focus + label {
   background-color: rgba(4, 20, 39, 0.15);
   outline: 2px solid #041827;
   outline-offset: 2px;
 }
 
-.form input[type=checkbox]:active label {
+.form input[type="checkbox"]:active + label {
   background-color: #026593;
 }
 
-.form input[type=checkbox] + label::before {
+.form input[type="checkbox"] + label::before {
   display: block;
   position: absolute;
   top: 50%;
@@ -1246,7 +1239,7 @@ button,
   box-sizing: border-box;
 }
 
-.form input[type=checkbox]:checked + label::before {
+.form input[type="checkbox"]:checked + label::before {
   background-image: url("../img/svg/check-mark.svg");
   background-repeat: no-repeat;
   background-position: 50%;
@@ -1255,7 +1248,7 @@ button,
 .form input[type="checkbox"]:invalid + label::after {
   display: block;
   content: "Необходимо согласие";
-  color: tomato;
+  color: #ff6347;
 }
 
 .page-footer {
@@ -1325,7 +1318,7 @@ button,
 
 .page-footer h2 {
   color: #ffffff;
-  font-family: 'Roboto Condensed';
+  font-family: "Roboto Condensed", "Tahoma", sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 16px;
@@ -1405,11 +1398,11 @@ button,
 
 .social a {
   padding: 5px;
-  color: #F2F5F6;
+  color: #f2f5f6;
 }
 
 .social a:hover {
-  color: #00B2FF;
+  color: #00b2ff;
 }
 
 .contacts a {
@@ -1447,7 +1440,7 @@ button,
   -ms-transform: translateX(-258px);
   transform: translateX(-258px);
   padding: 40px;
-  background-color: #00B2FF;
+  background-color: #00b2ff;
 }
 
 .modal__close-button {
@@ -1569,7 +1562,7 @@ button,
   .goods li {
     margin: 0;
     max-width: none;
-    height: 250px;
+    min-height: 250px;
   }
 
   .product img {
@@ -1593,7 +1586,8 @@ button,
   }
 
   .product h3 {
-    top: 40px;
+    max-width: 150px;
+    padding-top: 35px;
     margin: 0 45px;
   }
 
@@ -1603,7 +1597,7 @@ button,
 
   .feedback {
     background: none;
-    background-color: #00B2FF;
+    background-color: #00b2ff;
   }
 
   .feedback__container {
@@ -1641,7 +1635,7 @@ button,
     width: calc(100% - 55px);
   }
 
-  .form input[type=checkbox] + label {
+  .form input[type="checkbox"] + label {
     margin-left: 0;
     margin-top: 8px;
   }
@@ -1713,7 +1707,7 @@ button,
     display: block;
   }
 
-  .accordion--closed accordion__icon--plus {
+  .accordion--closed .accordion__icon--plus {
     display: block;
   }
 
@@ -1877,7 +1871,8 @@ button,
   }
 
   .product h3 {
-    top: 27px;
+    max-width: 130px;
+    padding-top: 26px;
     margin: 0 30px;
     font-size: 18px;
   }
@@ -1923,7 +1918,7 @@ button,
     margin-bottom: 25px;
   }
 
-  .form input[type=checkbox] + label {
+  .form input[type="checkbox"] + label {
     margin-left: 5px;
     margin-top: 0;
   }

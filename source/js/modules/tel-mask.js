@@ -8,8 +8,7 @@ const maskOptions = {
 
 const initTelMask = () => {
   telInputs.forEach((input) => {
-    const addMask = new IMask(input, maskOptions);
-    addMask();
+    IMask(input, maskOptions);
   });
 };
 

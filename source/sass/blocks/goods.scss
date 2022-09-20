@@ -1,8 +1,10 @@
 .goods {
+  position: relative;
   background-color: $dark-blue;
   color: $default-white;
   padding-top: 70px;
   padding-bottom: 140px;
+  z-index: -1000;
 
   @include vp-1023 {
     padding-top: 55px;
@@ -65,12 +67,12 @@
 
 .goods li {
   max-width: 350px;
-  height: 650px;
+  min-height: 650px;
 
   @include vp-1023 {
     margin: 0;
     max-width: none;
-    height: 250px;
+    min-height: 250px;
   }
 }
 

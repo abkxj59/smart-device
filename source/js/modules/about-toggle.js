@@ -30,7 +30,9 @@ const initAboutToggle = () => {
   hiddenMobileText.forEach((item) => {
     item.classList.add('about__text--mobile-hidden');
   });
-  aboutToggleButton.addEventListener('click', switchAbout);
+  if (aboutToggleButton !== null) {
+    aboutToggleButton.addEventListener('click', switchAbout);
+  }
 };
 
 export {initAboutToggle};
