@@ -1,14 +1,16 @@
 .modal {
   position: fixed;
   top: 0;
+  bottom: 0;
   width: 100%;
   z-index: 500;
+  overflow: scroll;
 }
 
 .modal__overlay {
   position: absolute;
   top: 0;
-  height: 100vh;
+  height: 200vh;
   width: 100%;
   background-color: $overlay-color;
 }
@@ -27,9 +29,12 @@
   position: absolute;
   top: 15px;
   right: 15px;
+  width: 40px;
+  height: 40px;
   background-color: $transparent;
   border: none;
   padding: 10px;
+  cursor: pointer;
 
   &:hover {
     background-color: $bg-blue;

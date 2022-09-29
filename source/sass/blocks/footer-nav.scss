@@ -1,33 +1,35 @@
 .footer-nav ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-flow: row dense;
+  column-count: 2;
+  // column-fill: auto;
 
   @include vp-1023 {
-    display: block;
+    column-count: 1;
   }
 }
 
 .footer-nav li {
   max-width: 235px;
-}
+  margin-bottom: 10px;
 
-.footer-nav li:nth-child(-n+4) {
-  grid-column-start: 1;
-}
+  &:last-child {
+    padding-bottom: 29px;
 
-.footer-nav a {
-  display: block;
-  margin: 0;
-  padding-bottom: 10px;
-  color: $default-white;
-  opacity: 30%;
-
-  &:hover {
-    opacity: 1;
+    @include vp-1023 {
+      padding-bottom: 0;
+    }
   }
 
   @include vp-1023 {
-    padding-bottom: 9px;
+    margin-bottom: 9px;
+  }
+}
+
+.footer-nav a {
+  display: inline;
+  color: $default-white;
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
   }
 }

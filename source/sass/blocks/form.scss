@@ -7,15 +7,16 @@
 
   @include vp-1023 {
     padding-left: 0;
+    width: 100%;
   }
 
   @include vp-767 {
-    display: block;
+    grid-template-columns: auto;
   }
 }
 
 .form--modal {
-  display: block;
+  grid-template-columns: auto;
   padding-left: 0;
   padding-bottom: 5px;
 }
@@ -231,4 +232,52 @@
   display: block;
   content: "Необходимо согласие";
   color: $form-error-color;
+}
+
+.form input[type="checkbox"]:invalid + label {
+  outline: 1px solid $form-error-color;
+  outline-offset: 1px;
+}
+
+.form__tel-container {
+  position: relative;
+}
+
+.form input[data-mask="phone"] {
+  width: 100%;
+}
+
+.form__tel-error-message {
+  display: none;
+  width: 100%;
+  font-size: 14px;
+  line-height: 15px;
+  color: $form-error-color;
+  position: absolute;
+  top: -30px;
+  text-align: end;
+
+  @include vp-767 {
+    top: -24px;
+    font-size: 11px;
+    line-height: 11px;
+  }
+}
+
+.form--modal .form__tel-error-message {
+  top: -20px;
+  text-align: center;
+}
+
+.form .invalid {
+  outline: 1px solid $form-error-color;
+  outline-offset: 1px;
+}
+
+.form .invalid + .form__tel-error-message {
+  display: block;
+}
+
+.form__agreement-container {
+  order: 1;
 }

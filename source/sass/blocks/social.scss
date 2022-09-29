@@ -1,5 +1,6 @@
 .social ul {
   display: flex;
+  flex-wrap: wrap;
   padding-left: 10px;
 
   @include vp-1023 {

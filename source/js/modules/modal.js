@@ -5,6 +5,8 @@ const overlay = document.querySelector('.modal__overlay');
 const openModalButton = document.querySelector('.page-header__button');
 const closeModalButton = document.querySelector('.modal__close-button');
 const form = document.querySelector('.modal__form');
+const telInput = form.querySelector('[data-mask="phone"]');
+const firstElement = document.querySelector('.page-header__link--mail');
 
 const closeModal = () => {
   modal.hidden = true;
@@ -31,9 +33,15 @@ const initModal = () => {
       }
     });
     form.addEventListener('submit', () => {
-      closeModal();
+      if (telInput.value.length === 16) {
+        closeModal();
+      }
     });
   }
+  firstElement.addEventListener('focus', (evt) => {
+    evt.stopPropagation();
+    nameInput.focus();
+  });
 };
 
 export {initModal};

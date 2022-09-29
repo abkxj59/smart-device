@@ -11,10 +11,13 @@
 }
 
 .page__body {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
   position: relative;
+  min-height: 100vh;
 }
+
 
 .page__body--modal-opened {
   position: fixed;
@@ -32,4 +35,8 @@
   @include vp-1023 {
     position: absolute;
   }
+}
+
+.page__footer {
+  margin-top: auto;
 }
